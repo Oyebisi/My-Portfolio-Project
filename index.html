@@ -7,6 +7,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Ridwan Oyebisi - Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init({
+      publicKey: "bBHTgbbPMwyrqZ8kl", // ✅ your EmailJS Public Key
+    });
+  })();
+</script>
+
+
 </head>
 
 <body>
@@ -164,17 +175,18 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Adress">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+       
+    <form id="contact-form">
+        <div class="input-box">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            <input type="text" id="subject" name="subject" placeholder="Email Subject">
+        </div>
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn" >
         </form>
     </section>
     <!-- Footer Section Code -->
